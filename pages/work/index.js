@@ -41,7 +41,7 @@ const Work = () => {
               animate="show"
               exit="hidden"
               className='mb-4 max-w-[400px] mx-auto lg:mx-0'>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi tenetur ea, similique illum aliquam in expedita excepturi at facilis doloremque. Sit totam ipsa necessitatibus harum laborum quibusdam praesentium quos illum?
+               As a dedicated and detail-oriented web-developer, I have successfully developed and deployed several impactful projects. My portfolio includes a modern 3D interactive website, built using Next.js and Framer Motion, and a cutting-edge Resume Builder application developed with React.js. I specialize in creating intuitive, user-centric interfaces and optimizing web applications for performance and scalability. Recently, I completed a garbage classification project leveraging data science techniques, showcasing my proficiency in machine learning and problem-solving. 
               </motion.p>
               </div>
 

@@ -1,58 +1,66 @@
 import Image from "next/image";
 
-// import required modules
-import { Pagination } from 'swiper';
+// Import required modules
+import { Pagination } from "swiper";
 
-// import swiper react components
-import { Swiper, SwiperSlide } from 'swiper/react';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
 
-// import swiper styles
-import 'swiper/css';
-import 'swiper/css/free-mode';
-import 'swiper/css/pagination';
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
 
 import { BsArrowRight } from "react-icons/bs"; // Corrected import
 
-// data
+// Data
 const workSlides = {
   slides: [
     {
       images: [
         {
-          title: 'title',
-          path: '/thumb1.jpg',
+          title: "Virtual-Piano",
+          path: "/thumb1.jpg",
+          link: "https://virtual-piano-black.vercel.app/",
         },
         {
-          title: 'title',
-          path: '/thumb2.jpg',
+          title: "Beats",
+          path: "/thumb2.jpg",
+          link: "https://specs-rouge.vercel.app/",
         },
         {
-          title: 'title',
-          path: '/thumb3.jpg',
+          title: "Resume-Builder",
+          path: "/thumb3.jpg",
+          link: "https://resume-roan-eight-50.vercel.app/",
         },
         {
-          title: 'title',
-          path: '/thumb4.jpg',
+          title: "To-do-list",
+          path: "/thumb4.jpg",
+          link: "https://to-do-list-lake-six-31.vercel.app/",
         },
       ],
     },
     {
       images: [
         {
-          title: 'title',
-          path: '/thumb4.jpg',
+          title: "Plan-with-love",
+          path: "/thumb1.jpg",
+          link: "https://plan-with-love-starter.vercel.app/",
         },
         {
-          title: 'title',
-          path: '/thumb1.jpg',
+          title: "Tic-tac-toe",
+          path: "/thumb2.jpg",
+          link: "https://tic-tac-toe-chi-opal.vercel.app/",
         },
         {
-          title: 'title',
-          path: '/thumb2.jpg',
+          title: "Counter",
+          path: "/thumb3.jpg",
+          link: "https://counter-app-rho-two.vercel.app/",
         },
         {
-          title: 'title',
-          path: '/thumb3.jpg',
+          title: "Hotel-front-page",
+          path: "/thumb4.jpg",
+          link: "https://restaurant-webpage-chi.vercel.app/",
         },
       ],
     },
@@ -79,26 +87,31 @@ const WorkSlider = () => {
                     key={imgIndex}
                     className="relative rounded-lg overflow-hidden flex items-center justify-center group"
                   >
-                    <div className="flex items-center justify-center relative overflow-hidden">
-                      {/* {image} */}
-                      <Image src={image.path} width={500} height={300} alt="" />
+                    <a
+                      href={image.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full h-full"
+                    >
+                      <div className="flex items-center justify-center relative overflow-hidden">
+                        {/* Image */}
+                        <Image
+                          src={image.path}
+                          width={500}
+                          height={300}
+                          alt={image.title}
+                          className="object-cover w-full h-full"
+                        />
 
-                      {/* {overlay gradient} */}
-                      <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#e838cc] to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
-                      {/* { title } */}
-                      <div className="absolute bottom-0 translate-y-full group-hover:-translate-y-10 group-hover:xl:-translate-y-20 transition-all duration-300">
-                        <div className="flex items-center gap-x-2 text-[13px] tracking-[0.2em]">
-                          {/* {title part1} */}
-                          <div className="delay-100">LIVE</div>
-                          {/* {title part 2} */}
-                          <div className="translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150">PROJECT</div>
-                          {/* {icon} */}
-                          <div className="text-xl translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-200">
-                            <BsArrowRight />
-                          </div>
+                        {/* Overlay gradient */}
+                        <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#e838cc] to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
+
+                        {/* Title */}
+                        <div className="absolute bottom-4 left-4 bg-black/70 text-white px-3 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-all duration-300">
+                          {image.title}
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </div>
                 );
               })}

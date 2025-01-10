@@ -1,4 +1,3 @@
-'use client'
 
 // components
 import ServiceSlider from '../../components/ServiceSlider.js';

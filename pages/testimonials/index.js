@@ -1,4 +1,3 @@
-'use client'
 
 import TestimonialSlider from "../../components/TestimonialSlider";
 import React from 'react';

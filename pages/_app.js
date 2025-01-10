@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }) {
       <Transition />
       <Component {...pageProps} />
       </motion.div>
-     </AnimatePresence>      
+    </AnimatePresence>      
   </Layout>
   ); 
 }

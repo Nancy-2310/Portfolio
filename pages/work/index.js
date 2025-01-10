@@ -1,4 +1,3 @@
-'use client'
 
 // components
 import WorkSlider from '../../components/WorkSlider';

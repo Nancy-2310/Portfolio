@@ -1,4 +1,3 @@
-'use client'
 
 // pages/api/contact.js
 
